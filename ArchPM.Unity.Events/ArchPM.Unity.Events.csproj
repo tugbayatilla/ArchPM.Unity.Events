@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Tugbay Atilla</Authors>
+    <Company>Archpm</Company>
+    <Copyright>© 2021 Tugbay Atilla</Copyright>
+    <PackageProjectUrl>https://github.com/tugbayatilla/ArchPM.Unity.Events</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tugbayatilla/ArchPM.Unity.Events</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>Unity, Events, EventSystem</PackageTags>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <PackageIconUrl>https://raw.githubusercontent.com/tugbayatilla/ArchPM.Unity.Events/master/icon.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
