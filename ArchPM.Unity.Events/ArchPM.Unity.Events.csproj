@@ -12,7 +12,9 @@
     <PackageTags>Unity, Events, EventSystem</PackageTags>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
-    <PackageIconUrl>https://raw.githubusercontent.com/tugbayatilla/ArchPM.Unity.Events/master/icon.png</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Version>1.0.1</Version>
     <PackageReleaseNotes>Refactoring names and correcting documentation</PackageReleaseNotes>
   </PropertyGroup>
@@ -21,4 +23,9 @@
     <DocumentationFile>C:\Users\Tugbay\source\github.com\ArchPM.Unity.Events\ArchPM.Unity.Events\ArchPM.Unity.Events.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="Assets\icon.png" Pack="true" PackagePath="\" />
+    <None Include="Assets\README.md" Pack="true" PackagePath="\"/>
+    <None Include="Assets\LICENSE.md" Pack="true" PackagePath=""/>
+  </ItemGroup>
 </Project>
