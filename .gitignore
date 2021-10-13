@@ -3,6 +3,7 @@ bin/
 obj/
 .vs/
 packages/
+_NCrunch*/
 
 # Prerequisites
 *.d
@@ -13,6 +14,7 @@ packages/
 *.obj
 *.elf
 *.ncrunchproject
+*.ncrunchsolution
 
 # Linker output
 *.ilk
