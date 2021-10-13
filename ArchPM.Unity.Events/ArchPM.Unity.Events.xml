@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArchPM.Unity.Events</name>
+    </assembly>
+    <members>
+        <member name="T:ArchPM.Unity.Events.EventBus">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:ArchPM.Unity.Events.IEventBus" />
+        </member>
+        <member name="F:ArchPM.Unity.Events.EventBus.Instance">
+            <summary>
+            The instance
+            </summary>
+        </member>
+        <member name="P:ArchPM.Unity.Events.EventBus.Publisher">
+            <summary>
+            Gets the publisher.
+            </summary>
+            <value>
+            The publisher.
+            </value>
+        </member>
+        <member name="P:ArchPM.Unity.Events.EventBus.Consumer">
+            <summary>
+            Gets the consumer.
+            </summary>
+            <value>
+            The consumer.
+            </value>
+        </member>
+        <member name="P:ArchPM.Unity.Events.EventBus.Init">
+            <summary>
+            Gets the initialize.
+            </summary>
+            <value>
+            The initialize.
+            </value>
+        </member>
+        <member name="T:ArchPM.Unity.Events.EventMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ArchPM.Unity.Events.EventMessage.Event">
+            <summary>
+            Gets or sets the event.
+            </summary>
+            <value>
+            The event.
+            </value>
+        </member>
+        <member name="P:ArchPM.Unity.Events.EventMessage.CreatedAt">
+            <summary>
+            Gets or sets the created at.
+            </summary>
+            <value>
+            The created at.
+            </value>
+        </member>
+        <member name="P:ArchPM.Unity.Events.EventMessage.EventType">
+            <summary>
+            Gets the type of the event.
+            </summary>
+            <value>
+            The type of the event.
+            </value>
+        </member>
+        <member name="T:ArchPM.Unity.Events.EventMessage`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ArchPM.Unity.Events.EventMessage`1.Event">
+            <summary>
+            Gets or sets the event.
+            </summary>
+            <value>
+            The event.
+            </value>
+        </member>
+        <member name="P:ArchPM.Unity.Events.EventMessage`1.CreationTime">
+            <summary>
+            Gets or sets the creation time.
+            </summary>
+            <value>
+            The creation time.
+            </value>
+        </member>
+        <member name="P:ArchPM.Unity.Events.EventMessage`1.EventType">
+            <summary>
+            Gets the type of the event.
+            </summary>
+            <value>
+            The type of the event.
+            </value>
+        </member>
+        <member name="M:ArchPM.Unity.Events.EventMessage`1.Convert(ArchPM.Unity.Events.EventMessage)">
+            <summary>
+            Converts the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ArchPM.Unity.Events.IConsumer">
+            <summary>
+              
+            </summary>
+        </member>
+        <member name="P:ArchPM.Unity.Events.IConsumer.ActiveCount">
+            <summary>
+            Gets all currently active subscribed Consumers
+            </summary>
+            <value>
+            The active count.
+            </value>
+        </member>
+        <member name="M:ArchPM.Unity.Events.IConsumer.Consume``1(System.Action{ArchPM.Unity.Events.EventMessage{``0}})">
+            <summary>
+            Subsribe to the event according to T
+            </summary>
+            <typeparam name="T">a class that implements IEvent</typeparam>
+            <param name="action">The action.</param>
+            <returns>
+            ICnsumerResult
+            </returns>
+        </member>
+        <member name="M:ArchPM.Unity.Events.IConsumer.Consume(System.Action{ArchPM.Unity.Events.EventMessage},System.Type[])">
+            <summary>
+            Consumes the specified action.
+            </summary>
+            <param name="action">The action.</param>
+            <param name="expectedTypes">The expected types.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ArchPM.Unity.Events.IConsumer.UnsubscribeAll">
+            <summary>
+            Unsubscribes all.
+            </summary>
+        </member>
+        <member name="T:ArchPM.Unity.Events.IConsumeResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ArchPM.Unity.Events.IConsumeResult.Unsubscribe">
+            <summary>
+            Unsubscribes this instance.
+            </summary>
+        </member>
+        <member name="T:ArchPM.Unity.Events.IEvent">
+            <summary>
+            mark the class as an Event
+            </summary>
+        </member>
+        <member name="T:ArchPM.Unity.Events.IEventBus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ArchPM.Unity.Events.IEventBus.Publisher">
+            <summary>
+            Gets the publisher.
+            </summary>
+            <value>
+            The publisher.
+            </value>
+        </member>
+        <member name="P:ArchPM.Unity.Events.IEventBus.Consumer">
+            <summary>
+            Gets the consumer.
+            </summary>
+            <value>
+            The consumer.
+            </value>
+        </member>
+        <member name="P:ArchPM.Unity.Events.IEventBus.Init">
+            <summary>
+            Gets the initialize.
+            </summary>
+            <value>
+            The initialize.
+            </value>
+        </member>
+        <member name="T:ArchPM.Unity.Events.IInitialization">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:ArchPM.Unity.Events.ILogRegister" />
+        </member>
+        <member name="T:ArchPM.Unity.Events.ILogRegister">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ArchPM.Unity.Events.ILogRegister.RegisterInfoLogAction(System.Action{System.String})">
+            <summary>
+            Registers the information log action.
+            </summary>
+            <param name="logAction">The log action.</param>
+        </member>
+        <member name="M:ArchPM.Unity.Events.ILogRegister.RegisterErrorLogAction(System.Action{System.Exception})">
+            <summary>
+            Registers the error log action.
+            </summary>
+            <param name="logAction">The log action.</param>
+        </member>
+        <member name="T:ArchPM.Unity.Events.IPublisher">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ArchPM.Unity.Events.IPublisher.Publish(ArchPM.Unity.Events.IEvent)">
+            <summary>
+            Publishes the specified event.
+            </summary>
+            <param name="event">The event.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ArchPM.Unity.Events.IPublishResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ArchPM.Unity.Events.IPublishResult.Event">
+            <summary>
+            Gets or sets the event.
+            </summary>
+            <value>
+            The event.
+            </value>
+        </member>
+    </members>
+</doc>

@@ -14,7 +14,7 @@ namespace ArchPM.Unity.Events.Models
 
 		public int ActiveCount => _eventBus.ActiveConsumerCount;
 
-		public IConsumerResult Consume<T>(Action<EventMessage<T>> action) where T : IEvent
+		public IConsumeResult Consume<T>(Action<EventMessage<T>> action) where T : IEvent
 		{
 			EventHandler<EventMessage> internalAction = null;
 
@@ -37,10 +37,10 @@ namespace ArchPM.Unity.Events.Models
 
 			_eventBus.OnEventPublished += internalAction;
 
-			return ConsumerResult.NewResult(_eventBus, internalAction);
+			return ConsumeResult.NewResult(_eventBus, internalAction);
 		}
 
-		public IConsumerResult Consume(Action<EventMessage> action, params Type[] expectedTypes)
+		public IConsumeResult Consume(Action<EventMessage> action, params Type[] expectedTypes)
 		{
 			EventHandler<EventMessage> internalMethod = null;
 
@@ -61,7 +61,7 @@ namespace ArchPM.Unity.Events.Models
 
 			_eventBus.OnEventPublished += internalMethod;
 
-			return ConsumerResult.NewResult(_eventBus, internalMethod);
+			return ConsumeResult.NewResult(_eventBus, internalMethod);
 		}
 
 		public void UnsubscribeAll()

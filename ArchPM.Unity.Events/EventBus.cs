@@ -3,9 +3,17 @@ using System;
 
 namespace ArchPM.Unity.Events
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <seealso cref="ArchPM.Unity.Events.IEventBus" />
 	public sealed class EventBus : IEventBus
 	{
 		// Members
+
+		/// <summary>
+		/// The instance
+		/// </summary>
 		public static readonly IEventBus Instance = new EventBus();
 		private readonly IPublisher _publisher;
 		private readonly IConsumer _consumer;
@@ -16,8 +24,27 @@ namespace ArchPM.Unity.Events
 		internal event EventHandler<EventMessage> OnEventPublished;
 
 		// Properties
+
+		/// <summary>
+		/// Gets the publisher.
+		/// </summary>
+		/// <value>
+		/// The publisher.
+		/// </value>
 		public IPublisher Publisher => _publisher;
+		/// <summary>
+		/// Gets the consumer.
+		/// </summary>
+		/// <value>
+		/// The consumer.
+		/// </value>
 		public IConsumer Consumer => _consumer;
+		/// <summary>
+		/// Gets the initialize.
+		/// </summary>
+		/// <value>
+		/// The initialize.
+		/// </value>
 		public IInitialization Init => _registerer;
 
 		// Internal Methods
