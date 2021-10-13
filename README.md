@@ -3,7 +3,7 @@
 ## The drivers to write such a framework item.
 
 - I am learning Unity for fun and I am watching youtube videos.
-- I saw that everybody is kinda struggling while given or creating examples.
+- I saw that everybody is kinda struggling while giving or creating examples.
 - It easly can be shown the bifferences between Singleton and Observer patterns.
 - I said to myself, don't struggle, use this :)
 
@@ -67,11 +67,11 @@ private void Event1Handler(EventMessage<Event1> eventMessage){
 
 // Call Consume method and set the Event1Handler
 // you can put this in Start method
-IConsumerResult event1ConsumerResult 
+IConsumeResult event1ConsumeResult 
 = EventBus.Instance.Consumer.Consume<Event1>(Event1Handler);
 
-// to Unsubscribe, in OnDestroy method
-event1ConsumerResult.Unsubscribe();
+// in OnDestroy method, item must be unsubscribed.
+event1ConsumeResult.Unsubscribe();
 
 ```
 
@@ -82,14 +82,14 @@ using ArchPM.Unity.Events;
 
 // Call Consume method and set the Event1Handler
 // you can put this in Start method
-IConsumerResult event1ConsumerResult 
+IConsumeResult event1ConsumeResult 
 = EventBus.Instance.Consumer.Consume<Event1>(eventMessage => {
     // you will get the eventMessage which is a wrapper of Event1 event class.
     // every time when the Event1 published, you will get this information.
 });
 
 // to Unsubscribe, in OnDestroy method
-event1ConsumerResult.Unsubscribe();
+event1ConsumeResult.Unsubscribe();
 
 ```
 
